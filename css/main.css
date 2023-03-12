@@ -1,0 +1,79 @@
+body {
+  /* background-color: rgb(12, 42, 83); */
+  background: linear-gradient(rgb(16, 51, 99) 60%, rgb(12, 42, 83));
+  color: rgb(222, 240, 248);
+  font-size: 100%;
+}
+
+.font-mincho {
+  font-family: 'Noto Serif JP', '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+}
+
+.event-title {
+  text-align: center;
+  font-size: calc(100vw * 128 / 1920);
+  height: 100vh;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+  word-break: keep-all;
+  overflow: hidden;
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.event-title rt {
+  font-size: 40%;
+}
+
+.event-title-clickable {
+  cursor: pointer;
+}
+
+.event-title-clickable:hover {
+  color: rgba(222, 240, 248, 0.75);
+}
+
+.event-period {
+  font-size: calc(100vw * 128 * 0.4 / 1920);
+  padding-top: calc(100vw * 12 / 1920);
+}
+
+.event-list-header {
+  padding: 1.5rem 0 1.5rem 0;
+  /* background-color: black; */
+  font-size: 75%;
+}
+.event-list-header .app-title {
+  padding-bottom: 0.75rem;
+}
+.event-list-header .info {
+  font-size: 80%;
+}
+.event-list-header a:link,
+.event-list-header a:visited,
+.event-list-header a:hover,
+.event-list-header a:active
+{
+  color: inherit;
+}
+
+.event-list-item {
+  padding: 1rem 0 1rem 0;
+  font-size: 1rem;
+  color: rgb(222, 240, 248);
+  word-break: keep-all;
+  overflow: hidden;
+}
+
+.event-list-item:hover {
+  background-color: rgb(222, 240, 248);
+  color: rgb(12, 42, 83);
+}
+
+.event-list-item.selected-item {
+  background-color: rgb(29, 70, 128);
+  color: rgb(222, 240, 248);
+}

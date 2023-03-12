@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Azurlane Event Name Reading</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400&display=swap&subset=japanese">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div id="app">
+    <div class="event-title font-mincho" v-if="showTitle">
+      <p class="event-title-clickable" v-html="eventTitleHtml" @click="showTitle = !showTitle"></p>
+      <p class="event-period">
+        {{selectedEventPeriod.begin}} ～ {{selectedEventPeriod.end}}
+      </p>
+    </div>
+    <div class="font-mincho" v-else>
+      <div>
+        <div class="event-list-header has-text-centered">
+          <p class="app-title"><a href="https://github.com/voidproc/azurlane-event-name-reading">Azurlane Event Name Reading</a></p>
+          <p class="info">Copyright &copy; 2023 <a href="https://twitter.com/voidproc">voidProc</a></p>
+        </div>
+      </div>
+      <div class="event-list">
+        <div class="event-list-item has-text-centered"
+             :class="{ 'selected-item': index === selected }"
+             @click="showTitle = true; selected = index"
+             v-for="(e, index) in events"
+             :key="e">
+          {{ e.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
