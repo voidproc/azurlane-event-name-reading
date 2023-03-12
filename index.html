@@ -11,26 +11,28 @@
 </head>
 <body>
   <div id="app">
-    <div class="event-title font-mincho" v-if="showTitle">
-      <p class="event-title-clickable" v-html="eventTitleHtml" @click="showTitle = !showTitle"></p>
-      <p class="event-period">
-        {{selectedEventPeriod.begin}} ～ {{selectedEventPeriod.end}}
-      </p>
-    </div>
-    <div class="font-mincho" v-else>
-      <div>
-        <div class="event-list-header has-text-centered">
-          <p class="app-title"><a href="https://github.com/voidproc/azurlane-event-name-reading">Azurlane Event Name Reading</a></p>
-          <p class="info">Copyright &copy; 2023 <a href="https://twitter.com/voidproc">voidProc</a></p>
-        </div>
+    <div id="app_" style="display: none;">
+      <div class="event-title font-mincho" v-if="showTitle">
+        <p class="event-title-clickable" v-html="eventTitleHtml" @click="showTitle = !showTitle"></p>
+        <p class="event-period">
+          {{selectedEventPeriod.begin}} ～ {{selectedEventPeriod.end}}
+        </p>
       </div>
-      <div class="event-list">
-        <div class="event-list-item has-text-centered"
-             :class="{ 'selected-item': index === selected }"
-             @click="showTitle = true; selected = index"
-             v-for="(e, index) in events"
-             :key="e">
-          {{ e.name }}
+      <div class="font-mincho" v-else>
+        <div>
+          <div class="event-list-header has-text-centered">
+            <p class="app-title"><a href="https://github.com/voidproc/azurlane-event-name-reading">Azurlane Event Name Reading</a></p>
+            <p class="info">Copyright &copy; 2023 <a href="https://twitter.com/voidproc">voidProc</a></p>
+          </div>
+        </div>
+        <div class="event-list">
+          <div class="event-list-item has-text-centered"
+              :class="{ 'selected-item': index === selected }"
+              @click="showTitle = true; selected = index"
+              v-for="(e, index) in events"
+              :key="e">
+            {{ e.name }}
+          </div>
         </div>
       </div>
     </div>

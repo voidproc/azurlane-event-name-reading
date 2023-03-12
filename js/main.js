@@ -296,6 +296,9 @@ const app = {
     eventTitleHtml() {
       return parseTextRuby(this.selectedEvent.tagged);
     }
+  },
+  mounted() {
+    document.getElementById('app_').style.display = 'block';
   }
 };
 
