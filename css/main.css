@@ -51,6 +51,7 @@ body {
 }
 .event-list-header .info {
   font-size: 80%;
+  padding: 0.5rem 0 0.5rem 0;
 }
 .event-list-header a:link,
 .event-list-header a:visited,
