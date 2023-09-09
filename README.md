@@ -13,5 +13,5 @@
 ## 開発環境
 
 - Windows 11 22H2
-- Visual Studio Code 1.76.1
-- Google Chrome 110.0.5481.180
+- Visual Studio Code
+- Google Chrome 116.0.5845.180
